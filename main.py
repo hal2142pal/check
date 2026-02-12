@@ -1,7 +1,9 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import List, Optional
 import uvicorn
+import os
 
 app = FastAPI(title="Checklist App", description="A simple, robust checklist application.")
 
@@ -36,9 +38,13 @@ def update_item(item_id: int, completed: bool):
             return item
     raise HTTPException(status_code=404, detail="Item not found")
 
-@app.get("/")
-def read_root():
-    return {"message": "Welcome to the Checklist App"}
+# Serve Frontend
+if os.path.exists("dist"):
+    app.mount("/", StaticFiles(directory="dist", html=True), name="static")
+else:
+    @app.get("/")
+    def read_root():
+        return {"message": "Welcome to the Checklist App. Build the frontend first!"}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
