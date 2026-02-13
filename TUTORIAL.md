@@ -55,14 +55,7 @@ Open your browser to: **http://127.0.0.1:8000**
 
 When you open the app, you will see a clean, minimalist interface.
 
-```text
-+---------------------------------------+
-|               Checklist               |
-|                                       |
-|  [ Add a new task...      ] [ Add ]   |
-|                                       |
-+---------------------------------------+
-```
+![Home Screen](docs/home.png)
 
 ### Adding a Task
 
@@ -70,23 +63,13 @@ When you open the app, you will see a clean, minimalist interface.
 2.  Type your task (e.g., "Buy milk").
 3.  Press **Enter** or click **Add**.
 
-```text
-+---------------------------------------+
-|  [ Buy milk               ] [ Add ]   |
-+---------------------------------------+
-|  [ ] Buy milk                         |
-+---------------------------------------+
-```
+![Task Added](docs/added.png)
 
 ### Completing a Task
 
 Click the checkbox next to a task to mark it as done.
 
-```text
-+---------------------------------------+
-|  [x] Buy milk                         |
-+---------------------------------------+
-```
+![Task Completed](docs/completed.png)
 
 The text will strike through, indicating completion.
 
