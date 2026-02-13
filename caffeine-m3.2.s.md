@@ -17,20 +17,7 @@
 
 **Structural Formula:**
 
-```text
-      O
-      ||
-      C
-     / \
- CH3-N  C=N
-     |  |  \
-     C==C   C-H
-     |  |  //
-     O  N--N
-        |
-       CH3
-```
-*(Note: A high-resolution chemical structure image would be embedded here in the final PDF submission.)*
+![Caffeine Structure](docs/caffeine-structure.svg)
 
 ## 3.2.S.1.3 General Properties
 
